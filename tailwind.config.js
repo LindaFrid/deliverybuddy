@@ -1,9 +1,20 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  purge: [
+    './public/**/*.html',
+    './src/**/*.vue',
+  ],
   theme: {
-    extend: {},
+    colors: {
+      primary: '#1abc9c',
+      secondary: '#2ecc71',
+      tertiary: '#3498db',
+    },
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+      serif: ['Georgia', 'serif'],
+    },
   },
-  plugins: [],
+  plugins: [
+    'tailwindcss/jit',
+  ],
 }
-
